@@ -28,20 +28,27 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (!license) {
+    return ''
+  }
+  return `## License
+  ${renderLicenseBadge}${renderLicenseLink}`
+}
 
 function tcCreate(tableContents) {
   if (!tableContents) {
-    return `
-
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
-     
-    `
+  return ''
   }
-  return '';
+  return `
+
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+   
+  `
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -60,7 +67,16 @@ function generateMarkdown(data) {
   http://${data.collaborators}
 
   ${renderLicenseSection}
-`;
+
+  ## Features
+  ${data.features}
+
+  ## Contributing
+  ${data.contributing}
+
+  ## Tests
+  ${data.tests}
+`
 }
 
 module.exports = generateMarkdown();
