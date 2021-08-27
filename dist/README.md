@@ -1,8 +1,8 @@
 
-  # will 
+  # Test Readme 
 
   ## Description
-  bla
+  A sample Description of the project
   
 
   ## Table of Contents
@@ -13,22 +13,22 @@
    
   
   ## Installation 
-  bla
+  The install process and how it works
 
   ## Usage
-  bla
+  Create a readme
 
   ## Credits
   http://undefined
 
   ## License
-  ![APM](https://img.shields.io/apm/l/github?color=purple&label=License&logo=MIT&style=plastic)[MIT License](https://choosealicense.com/licenses/mit/)
+  ![AUR license](https://img.shields.io/aur/license/j?color=red&label=License&logo=GNU) [GNU License](https://choosealicense.com/licenses/gpl-3.0/)
 
   ## Features
-  bla
+  optional
 
   ## Contributing
-  bla
+  optional
 
   ## Tests
-  bla
+  optional
