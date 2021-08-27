@@ -103,7 +103,7 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/README.md', generateMarkdown(data), err => {
             if (err) {
@@ -121,9 +121,9 @@ function writeToFile(fileName, data) {
 function init() {
     questions()
     .then(data => {
-        return data
+        return writeToFile(data)
     })
-    .then(writeToFile(data))
+    //.then(writeToFile(data))
     //.catch(err => {
     //    console.log(err)
     //})

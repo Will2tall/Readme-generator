@@ -33,7 +33,7 @@ function renderLicenseSection(license) {
     return ''
   }
   return `## License
-  ${renderLicenseBadge}${renderLicenseLink}`
+  ${renderLicenseBadge(license)}${renderLicenseLink(license)}`
 }
 
 function tcCreate(tableContents) {
@@ -52,11 +52,12 @@ function tcCreate(tableContents) {
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} 
+  return `
+  # ${data.title} 
 
   ## Description
   ${data.description}
-  ${tcCreate}
+  ${tcCreate(data.tableContents)}
   ## Installation 
   ${data.installation}
 
@@ -66,7 +67,7 @@ function generateMarkdown(data) {
   ## Credits
   http://${data.collaborators}
 
-  ${renderLicenseSection}
+  ${renderLicenseSection(data.license)}
 
   ## Features
   ${data.features}
