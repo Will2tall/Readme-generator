@@ -33,7 +33,7 @@ function renderLicenseSection(license) {
     return ''
   }
   return `## License
-  ${renderLicenseBadge(license)}${renderLicenseLink(license)}`
+  ${renderLicenseBadge(license)} ${renderLicenseLink(license)}`
 }
 
 function tcCreate(tableContents) {
